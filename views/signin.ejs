@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sign In | By Code Info</title>
+    <link rel="stylesheet" href="/stylesheets/signupStyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h4>Bowie State University Bank</h4>
+    <div class="signin-box">
+      <h1>Sign In</h1>
+
+      <% if(message.length > 0) { %>
+        <div class="error-msg">
+          <%= message %>
+        </div>
+      <% } %>
+
+      <form method="POST" action="/signin/val_signin">
+        <label>BSU Email</label>
+        <input type="email" name="email" placeholder="" id="email"/>
+        <label>Password</label>
+        <input type="password" name="password" id = "password" placeholder="" />
+        <input type="submit" value="Submit" id="submit" />
+        
+      </form>
+
+    </div>
+    <style>
+      a:hover {
+        color: #b7ba01;
+        background-color: black;
+      }
+    </style>
+    <p class="para-2">
+      Do not have an account? <a href="/signup">Sign Up Here</a>
+    </p>
+  </body>
+</html>

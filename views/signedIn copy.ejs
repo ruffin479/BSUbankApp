@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    header{
+        border-block-end-style: dotted; /*<!-- added border-->*/
+        background-color: #eef204;
+        padding: 30px;
+        background-image: url("/stylesheets/bulldog.png");
+        background-repeat: no-repeat;
+    }
+    h1{
+        text-align: center;
+        text-decoration: underline; /*<!-- added underline-->*/
+    }
+    h2{
+        text-decoration: underline; /*<!-- added underline-->*/
+    }
+    section{ /*<!-- added section block CSS-->*/
+        /*border: 2px solid black;
+        padding: 95px;*/
+        background-image: url("/stylesheets/yellowBank.png");
+        background-repeat: no-repeat;
+        background-size: 600px 300px;
+        background-position: center; 
+    }
+    nav{ /*<!-- added nav block CSS-->*/
+        padding: 100px;
+    }
+    footer{
+        border-block-start-style: dotted; /*<!-- added border-->*/
+        background-color: #eef204;
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%; 
+    }
+
+    .error-msg {
+
+        text-align: center;
+        color : red;
+        
+    }
+</style>
+<header> 
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Home Page of BSU Bank</title>
+
+    </head>
+
+    <body>
+
+        <h2 dir="rtl" id="emailTxt" lang="eng"> Welcome <%= (userData[0]).email %> </h2>
+
+
+        <h1>Bowie State University Bank</h1>
+
+        <br />
+        <br />
+
+        <% if(message.length > 0) { %>
+            <div class="error-msg">
+              <%= message %>
+            </div>
+        <% } %>
+
+        <br />
+        <label>Bank Balance:</label>
+        <br />
+        <!-- <input type="text" id="bankBalance" /> -->
+        <label>$</label>
+        <input type="text" id="bankBalance" value="<%= (userData[0]).balance %>" readonly="readonly"> 
+        <br />
+        <br />
+        <form method="POST" action="/signedIn/signedin-deposit">
+            <label>$</label>
+            <input placeholder="" name="deposit" step="0.01" value="0.00" id="depositInput" ></input>
+            <input type="submit" value = "Deposit" id="deposit"></input>
+        </form>
+        
+        <br />
+
+        <form method="POST" action="/signedIn/signedin-withdraw">
+            <label>$</label>
+            <input placeholder="" name="withdraw" step="0.01" value="0.00" id="withdrawInput"></input>
+            <input type="submit" value = "Withdraw" id="withdraw"></input>
+
+        </form>
+        
+
+          
+    </body>
+</header>
+
+<section>
+
+    <br />
+    <label>Bank Balance:</label>
+    <br />
+    <!-- <input type="text" id="bankBalance" /> -->
+    <label>$</label>
+    <input type="text" id="bankBalance" value="<%= (userData[0]).balance %>" readonly="readonly"> 
+    <br />
+    <br />
+    <form method="POST" action="/signedIn/signedin-deposit">
+        <label>$</label>
+        <input placeholder="" name="deposit" step="0.01" value="0.00" id="depositInput" ></input>
+        <input type="submit" value = "Deposit" id="deposit"></input>
+    </form>
+    
+    <br />
+
+    <form method="POST" action="/signedIn/signedin-withdraw">
+        <label>$</label>
+        <input placeholder="" name="withdraw" step="0.01" value="0.00" id="withdrawInput"></input>
+        <input type="submit" value = "Withdraw" id="withdraw"></input>
+
+    </form>
+    
+
+    <nav>
+        <ul>
+
+            <li><a href="/signin">Sign out</a></li>
+        </ul>
+    </nav>
+</section>
+
+<footer>
+    <p>Go Bulldogs!</p>
+</footer>
+
+</html>

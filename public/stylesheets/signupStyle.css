@@ -1,0 +1,103 @@
+body {
+ /*   background color: #4a0cf4; */
+    background-image: url("Bowie.jpg");
+    background-position: center;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .signup-box {
+    width: 360px;
+    height: 520px;
+    margin: auto;
+    background-color: white;
+    border-radius: 3px;
+  }
+  
+  .signin-box {
+    width: 360px;
+    height: 320px;
+    margin: auto;
+    border-radius: 3px;
+    background-color: white;
+  }
+
+  .error-msg {
+
+    text-align: center;
+    color : red;
+    
+  }
+  
+  
+
+  h1 {
+    text-align: center;
+    padding-top: 15px;
+  }
+  
+  h4 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 22px;
+  }
+  
+  form {
+    width: 300px;
+    margin-left: 20px;
+  }
+  
+  form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+  }
+  /* input[type="button"] {
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: #49c1a2;
+    color: white;
+    font-size: 18px;
+  } */
+
+  #submit {
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    /* background-color: #49c1a2; */
+    color: white;
+    font-size: 18px;
+    background-color: #b7ba01;
+  }
+
+
+  p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+  }
+  .para-2 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 15px;
+    margin-top: -10px;
+  }
+  .para-2 a {
+    color: #b7ba01;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  

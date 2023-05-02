@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<header> 
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/stylesheets/signedInStyle.css" />
+
+        <title>Home Page of BSU Bank</title>
+
+    </head>
+
+    
+
+    <body>
+
+        <h2 dir="rtl" id="emailTxt" lang="eng"> Welcome <%= (userData[0]).email %> </h2>
+
+
+        <h1>Bowie State University Bank</h1>
+
+        <br />
+
+        <% if(message.length > 0) { %>
+            <div class="error-msg">
+              <%= message %>
+            </div>
+        <% } %>        
+
+          
+    </body>
+</header>
+
+<section>
+
+    <!-- <a href="/signin">Sign out</a> -->
+    <br />
+
+    <button class="signOutBtn" onclick="location.href='/signin'">Sign Out</button>
+    <div class="balDisplay">
+        <label class="bankBalText">Bank Balance</label>
+        <br />
+        <br />
+        <!-- <input type="text" id="bankBalance" /> -->
+        <label>$</label>
+        <input type="text" class="balLabel" id="bankBalance" value="<%= (userData[0]).balance %>" readonly="readonly"> 
+        <br />
+        <br />
+        <br />
+    </div>
+ 
+
+    <form method="POST" class="depositForm" action="/signedIn/signedin-deposit">
+        <label>$</label>
+        <input class="balLabel" placeholder="" name="deposit" step="0.01" value="0.00" id="depositInput" ></input>
+        <br />
+        <br />
+        <input class="depositBtn" type="submit" value = "Deposit" id="deposit"></input>
+    </form>
+    
+    <br />
+
+    <form method="POST" class="withdrawForm" action="/signedIn/signedin-withdraw">
+        <label>$</label>
+        <input class="balLabel" placeholder="" name="withdraw" step="0.01" value="0.00" id="withdrawInput"></input>
+        <br />
+        <br />
+        <input class="withdrawBtn" type="submit" value = "Withdraw" id="withdraw"></input>
+
+    </form>
+
+
+</section>
+
+<footer>
+    <p>Go Bulldogs!</p>
+</footer>
+
+</html>

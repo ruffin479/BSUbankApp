@@ -1,0 +1,251 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    border-block-end-style: dotted; /*<!-- added border-->*/
+    background-color: #eef204;
+    padding: 8px;
+    background-image: url("/stylesheets/bulldog.png");
+    background-repeat: no-repeat;
+}
+h1{
+    text-align: center;
+    text-decoration: underline; /*<!-- added underline-->*/
+}
+h2{
+    text-decoration: underline; /*<!-- added underline-->*/
+}
+
+nav{ /*<!-- added nav block CSS-->*/
+    padding: 100px;
+}
+
+footer{
+    border-block-start-style: dotted; /*<!-- added border-->*/
+    background-color: #eef204;
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%; 
+}
+
+.error-msg {
+
+    text-align: center;
+    color : red;
+    
+}
+
+.balDisplay{
+
+    text-align: center;
+}
+
+.signOutBtn{
+
+    /* margin-left: -500px; */
+   
+    appearance: button;
+    background-color: #fcf519;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    /* margin: 0 auto; */
+    /* margin: left; */
+    /* outline: none;
+    overflow: visible; */
+    padding: 7px 8px;
+    text-align: center;
+    text-transform: uppercase;
+    /* touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    white-space: nowrap; */
+   
+    position: absolute;
+    width: 15%;
+    
+
+}
+
+.bankBalText{
+
+    appearance: button;
+    background-color: #fcf519;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #000000;
+    /* cursor: pointer; */
+    display: inline-block;
+    font-family: din-round,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0 auto;
+    /* outline: none;
+    overflow: visible; */
+    padding: 7px 8px;
+    text-align: center;
+    text-transform: uppercase;
+    /* touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    white-space: nowrap; */
+    width: 30%;
+    vertical-align: middle;
+}
+
+.balLabel{
+
+    outline: 2px solid rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 0.7rem 0.8rem;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 40%;
+    display: inline-block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+    text-align: center;
+
+}
+
+.depositBtn{
+    
+    appearance: button;
+    background-color: #fcf519;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0 auto;
+    outline: none;
+    overflow: visible;
+    padding: 7px 8px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    white-space: nowrap;
+    width: 30%;
+
+
+}
+
+.withdrawBtn{
+
+    appearance: button;
+    background-color: #fcf519;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0 auto;
+    outline: none;
+    overflow: visible;
+    padding: 7px 8px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    white-space: nowrap;
+    width: 30%;
+    justify-content: center;
+
+}
+
+
+.depositInput{
+
+    outline: 2px solid rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 0.7rem 0.8rem;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 40%;
+    display: inline-block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+    text-align: center;
+
+}
+
+.withdrawInput{
+
+    outline: 2px solid rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 0.7rem 0.8rem;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 40%;
+    display: inline-block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+    text-align: center;
+
+}
+
+
+
+.depositForm{
+
+    text-align: center;
+
+}
+
+.withdrawForm{
+
+    text-align: center;
+
+}
