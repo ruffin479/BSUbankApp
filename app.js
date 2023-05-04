@@ -43,12 +43,17 @@ app.use(session({secret: 'BsuBank', resave: true, saveUninitialized: true}))
 
 
 
-app.use('/', indexRouter);
+//app.use('/', indexRouter);
+app.use('/', signupRouter);
 app.use('/users', usersRouter);
 app.use('/sample_data', sampledataRouter);
 app.use('/signup', signupRouter);
 app.use('/signin', signinRouter);
 app.use('/signedIn', signedInRouter);
+
+app.get('/signup', function(req, res) {
+	res.render('signup', { });
+ });
 
 app.get('/signin', function(req, res) {
 	res.render('signin', { });
@@ -58,9 +63,7 @@ app.get('/signin', function(req, res) {
 	res.render('signedIn', { });
  });
 
- app.get('/signup', function(req, res) {
-	res.render('signup', { });
- });
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
