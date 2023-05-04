@@ -29,6 +29,9 @@ footer{
     bottom: 0;
     width: 100%; 
 
+    min-height: 20px;
+    margin-bottom: 1px;
+
 }
 
 .error-msg {
