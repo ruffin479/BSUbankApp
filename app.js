@@ -44,7 +44,8 @@ app.use(session({secret: 'BsuBank', resave: true, saveUninitialized: true}))
 
 
 //app.use('/', indexRouter);
-app.use('/', signupRouter);
+//app.use('/', signupRouter);
+app.use('/', homePageRouter);
 
 app.use('/users', usersRouter);
 app.use('/sample_data', sampledataRouter);
