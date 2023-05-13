@@ -13,6 +13,7 @@ var sampledataRouter = require('./routes/sample_data');
 var signupRouter = require('./routes/signup');
 var signinRouter = require('./routes/signin');
 var signedInRouter = require('./routes/signedIn');
+var homePageRouter = require('./routes/homepage');
 var flash = require('connect-flash');
 
 var app = express();
@@ -42,14 +43,16 @@ app.use(flash());
 app.use(session({secret: 'BsuBank', resave: true, saveUninitialized: true}))
 
 
-
 //app.use('/', indexRouter);
 app.use('/', signupRouter);
+
 app.use('/users', usersRouter);
 app.use('/sample_data', sampledataRouter);
 app.use('/signup', signupRouter);
 app.use('/signin', signinRouter);
 app.use('/signedIn', signedInRouter);
+app.use('/homepage', homePageRouter);
+
 
 app.get('/signup', function(req, res) {
 	res.render('signup', { });
@@ -61,6 +64,10 @@ app.get('/signin', function(req, res) {
 
  app.get('/signedIn', function(req, res) {
 	res.render('signedIn', { });
+ });
+
+ app.get('/homepage', function(req, res) {
+	res.render('homepage', { });
  });
 
 
