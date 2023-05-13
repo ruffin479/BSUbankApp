@@ -39,8 +39,6 @@ router.post("/signedin-deposit", function(request, response, next){
 
     var depositAmt = Number(request.body.deposit);
 
-    
-
     console.log("deposit:" + depositAmt);
 
     var userInfo = request.session.user;
@@ -65,7 +63,9 @@ router.post("/signedin-deposit", function(request, response, next){
         
         if(error)
         {
-            throw error;
+            console.log("Non-number input in deposit");
+            request.flash('error', "Non-number input in deposit");
+            response.redirect('/signedIn');
         }	
         else
         {
@@ -79,8 +79,6 @@ router.post("/signedin-deposit", function(request, response, next){
 });
 
 router.post("/signedin-withdraw", function(request, response, next){
-
-    
     
     var withdrawAmt = Number(request.body.withdraw);
 
@@ -116,7 +114,9 @@ router.post("/signedin-withdraw", function(request, response, next){
 
             if(error)
             {
-                throw error;
+                console.log("Non-number input in withdraw");
+                request.flash('error', "Non-number input in withdraw");
+                response.redirect('/signedIn');
             }	
             else
             {
