@@ -10,4 +10,3 @@ To recreate this program on a personal PC, you can: Option 1: Go to Link: https:
 
 Once database is created: open GitBASH window and navigate to the folder location where this program is saved. Once you “CD” into that folder, type “npm start”. Once the server is connected, open a BROWSER window and type: localhost:3000/signup
 
-GitHub - 00Phillipn/BSUbankApp
