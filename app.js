@@ -14,6 +14,7 @@ var signupRouter = require('./routes/signup');
 var signinRouter = require('./routes/signin');
 var signedInRouter = require('./routes/signedIn');
 var homePageRouter = require('./routes/homepage');
+var MarisaHomePageRouter = require('./routes/MarisaHomepage');
 var flash = require('connect-flash');
 
 var app = express();
@@ -46,7 +47,7 @@ app.use(session({secret: 'BsuBank', resave: true, saveUninitialized: true}))
 //app.use('/', indexRouter);
 //app.use('/', signupRouter);
 app.use('/', homePageRouter);
-
+app.use('/MarisaHomepage', MarisaHomePageRouter);
 app.use('/users', usersRouter);
 app.use('/sample_data', sampledataRouter);
 app.use('/signup', signupRouter);
@@ -71,6 +72,9 @@ app.get('/signin', function(req, res) {
 	res.render('homepage', { });
  });
 
+ app.get('/MarisaHomepage', function(req, res) {
+	res.render('MarisaHomepage', { });
+ });
 
 
 // catch 404 and forward to error handler
